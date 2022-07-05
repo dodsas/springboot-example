@@ -1,20 +1,40 @@
 Kotlin and Springboot Quartz  
 ================
 
-## reference site
-| site     | url                                             |
-|----------|-------------------------------------------------|
-| official | https://www.quartz-scheduler.org                |
-| bealdung | https://www.baeldung.com/spring-quartz-schedule |
+[//]: # (## reference site)
+
+[//]: # (| site     | url                                             |)
+
+[//]: # (|----------|-------------------------------------------------|)
+
+[//]: # (| official | https://www.quartz-scheduler.org                |)
+
+[//]: # (| bealdung | https://www.baeldung.com/spring-quartz-schedule |)
 
 ## 구성
 - Quartz 저장소 타입 : jdbc
-
 - JDBC : H2
 
 ## Reference
+### Official 
+https://www.quartz-scheduler.org               
+
+### bealdung 
+https://www.baeldung.com/spring-quartz-schedule
+
 #### Spring.IO
 https://docs.spring.io/spring-boot/docs/2.0.0.M3/reference/html/boot-features-quartz.html
+
+#### job 과 scheduler 분리 시도
+https://homoefficio.github.io/2019/09/28/Quartz-스케줄러-적용-아키텍처-개선-1/
+
+## 메모
+#### `QuartzJobBean.class`는 더 이상 사용하지 않아도 무관
+- SpringBeanJobFactory 에서 동일한 작업을 해주므로, ```Job.class``` 사용하면 됨
+#### Job 과 Trigger 각각 리스너 적용 가능, 전처리, 필터링 등 여러가지 활용
+#### Job 실패에 대한 사항은 Trigger의 MisfireInstruction 속성으로 적절한 처리 가능
+- MISFIRE_INSTRUCTION_ 로 시작하는 상수값으로 타입들 구분가능
+
 
 [//]: # (Building the project)
 

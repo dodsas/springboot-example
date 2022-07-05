@@ -1,4 +1,4 @@
-package ys.springboot.example.quartz
+package ys.springboot.example
 
 import org.quartz.JobExecutionContext
 import org.quartz.JobExecutionException
