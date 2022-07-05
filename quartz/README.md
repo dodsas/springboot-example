@@ -2,11 +2,19 @@ Kotlin and Springboot Quartz
 ================
 
 ## reference site
-| site     | url                              |
-|----------|----------------------------------|
-| official | https://www.quartz-scheduler.org |
+| site     | url                                             |
+|----------|-------------------------------------------------|
+| official | https://www.quartz-scheduler.org                |
+| bealdung | https://www.baeldung.com/spring-quartz-schedule |
 
+## 구성
+- Quartz 저장소 타입 : jdbc
 
+- JDBC : H2
+
+## Reference
+#### Spring.IO
+https://docs.spring.io/spring-boot/docs/2.0.0.M3/reference/html/boot-features-quartz.html
 
 [//]: # (Building the project)
 
