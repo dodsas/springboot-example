@@ -7,9 +7,9 @@ A strong focus of these is, of course, the Springboot Framework
 
 List of Examples
 ================
-| module | official site                    |
-|--------|----------------------------------|
-| quartz | https://www.quartz-scheduler.org | 
+| module | official site                        |
+|--------|--------------------------------------|
+| quartz | [Markdown-Basics](/quartz/README.md) |
 
 [//]: # (Building the project)
 
