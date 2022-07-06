@@ -1,15 +1,26 @@
 Kotlin and Springboot Examples  
-================
+==
 
 This project is **a collection of example codes** - each covering a single and well defined area of development in the Kotlin ecosystem. 
 A strong focus of these is, of course, the Springboot Framework
 
-
 List of Examples
 ================
-| module | official site                        |
-|--------|--------------------------------------|
-| quartz | [Markdown-Basics](/quartz/README.md) |
+- [Quartz](/quartz/README.md)
+
+Base Dependency
+==
+- Springboot
+- JDK 1.8
+- Kotlin
+- Embedded H2 (if needed)
+
+
+[//]: # (| module | linke                                |)
+
+[//]: # (|--------|--------------------------------------|)
+
+[//]: # (| quartz | [Markdown-Basics]&#40;/quartz/README.md&#41; |)
 
 [//]: # (Building the project)
 
