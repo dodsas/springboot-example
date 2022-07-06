@@ -1,6 +1,7 @@
 package ys.springboot.example
 
 import org.quartz.*
+import org.quartz.impl.matchers.KeyMatcher
 import org.springframework.scheduling.quartz.CronTriggerFactoryBean
 import org.springframework.stereotype.Service
 import javax.annotation.PostConstruct
@@ -14,6 +15,18 @@ class Sample(
         triggerBuilderStyle()
         triggerFactoryBeanStyle()
         triggerWithObjectJobData()
+        triggerWithJobListener()
+    }
+
+    private fun triggerWithJobListener() {
+        val jobDetail = JobBuilder.newJob(SampleJobBean::class.java).withIdentity("testJobListener").build()
+
+        val triggerFactory = CronTriggerFactoryBean()
+        triggerFactory.setName("testJobListenerTrigger")
+        triggerFactory.setCronExpression("/8 * * * * ?")
+        triggerFactory.afterPropertiesSet()
+        scheduler.listenerManager.addJobListener(SampleListener(), KeyMatcher.keyEquals(JobKey("testJobListener")))
+        scheduler.scheduleJob(jobDetail, triggerFactory.`object`)
     }
 
     private fun triggerWithObjectJobData() {

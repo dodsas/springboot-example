@@ -1,21 +1,26 @@
 package ys.springboot.example.quartz
 
 import org.quartz.*
+import org.quartz.impl.matchers.KeyMatcher.keyEquals
 import org.springframework.scheduling.quartz.JobDetailFactoryBean
 
 abstract class YsQuartzAbstract(
     private val scheduler: Scheduler,
 ) {
     companion object {
-        const val DEFAULT_GROUP: String = "YsDefaultGroup"
+        const val DEFAULT_GROUP: String = "YsQuartzGroup"
     }
 
     fun pause(alias: String){
-        scheduler.pauseTrigger(TriggerKey(getTriggerKeyName(alias), DEFAULT_GROUP))
+        scheduler.pauseTrigger(getTriggerKey(alias))
     }
 
     fun resume(alias: String){
-        scheduler.resumeTrigger(TriggerKey(getTriggerKeyName(alias), DEFAULT_GROUP))
+        scheduler.resumeTrigger(getTriggerKey(alias))
+    }
+
+    fun addJobListener(jobListener: JobListener, alias: String){
+        scheduler.listenerManager.addJobListener(jobListener, keyEquals(getJobKey(alias)))
     }
 
     fun scheduleJob(
@@ -36,12 +41,20 @@ abstract class YsQuartzAbstract(
         return trigger
     }
 
-    protected fun getTriggerKeyName(alias: String): String{
+    fun getTriggerKeyName(alias: String): String{
         return "YsTrigger_${alias}"
     }
 
-    protected fun getJobDetailName(alias: String): String{
+    fun getJobDetailName(alias: String): String{
         return "YsJobDetail_${alias}"
+    }
+
+    fun getJobKey(alias: String): JobKey {
+        return JobKey(getJobDetailName(alias), DEFAULT_GROUP)
+    }
+
+    fun getTriggerKey(alias: String): TriggerKey {
+        return TriggerKey(getTriggerKeyName(alias), DEFAULT_GROUP)
     }
 
     fun getJobDetail(jobKey: JobKey): JobDetail {

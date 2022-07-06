@@ -10,3 +10,4 @@
 rootProject.name = "springboot-example"
 
 include("quartz")
+include("test-standalone:quartz")

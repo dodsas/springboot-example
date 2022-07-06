@@ -7,6 +7,6 @@ import org.springframework.scheduling.quartz.QuartzJobBean
 class SampleJobBean: QuartzJobBean() {
     override fun executeInternal(context: JobExecutionContext) {
         val param = context.jobDetail.jobDataMap["sample parameter"]
-        println("testJobBean 무야호, param = $param")
+        println("${context.jobDetail.key.name} 무야호, param = $param")
     }
 }

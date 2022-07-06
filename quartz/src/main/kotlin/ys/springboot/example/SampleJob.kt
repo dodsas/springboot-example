@@ -8,10 +8,10 @@ class SampleJob: Job {
     override fun execute(context: JobExecutionContext) {
         val param = context.jobDetail.jobDataMap["sample parameter"]
         if(Random.nextBoolean()){
-            println("testJob 무야호, param = $param")
+            println("${context.jobDetail.key.name} 무야호, param = $param")
         }
         else {
-            println("testJob 에러야호, param = $param")
+            println("${context.jobDetail.key.name} 에러야호, param = $param")
             throw RuntimeException()
         }
     }

@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class Application
+class QuartzApplication
 
 fun main(args: Array<String>) {
-    runApplication<Application>(*args)
+    runApplication<QuartzApplication>(*args)
 }
