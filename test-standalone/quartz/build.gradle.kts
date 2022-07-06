@@ -30,7 +30,7 @@ repositories {
 
 dependencies {
 
-    implementation(project(":quartz"))
+    implementation(project(":springboot-quartz"))
 
     ////////////////////////////////////////////////////////////////////
     // Common

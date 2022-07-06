@@ -15,6 +15,8 @@ Kotlin and Springboot Quartz
 - Quartz 저장소 타입 : jdbc
 - JDBC : H2
 
+---
+
 ## Reference
 ### Official 
 https://www.quartz-scheduler.org               
@@ -27,6 +29,8 @@ https://docs.spring.io/spring-boot/docs/2.0.0.M3/reference/html/boot-features-qu
 
 ### job 과 scheduler 분리 시도
 https://homoefficio.github.io/2019/09/28/Quartz-스케줄러-적용-아키텍처-개선-1/
+
+---
 
 ## 메모
 #### `QuartzJobBean.class`는 더 이상 사용하지 않아도 무관
