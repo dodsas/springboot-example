@@ -31,8 +31,8 @@ https://homoefficio.github.io/2019/09/28/Quartz-스케줄러-적용-아키텍처
 ## 메모
 #### `QuartzJobBean.class`는 더 이상 사용하지 않아도 무관
 - SpringBeanJobFactory 에서 동일한 작업을 해주므로, ```Job.class``` 사용하면 됨
-#### Scheduler 에서 Job 과 Trigger 각각 리스너 적용 가능, 전처리, 필터링 등 여러가지 활용
-#### Job 실패에 대한 사항은 Trigger 의 MisfireInstruction 속성으로 적절한 처리 가능
+#### Scheduler 에서 Job 과 Trigger 각각 리스너 적용 가능, 전처리, 필터링, 예외처리 등 여러가지 활용
+#### Trigger 작업 실패에 대한 사항은 Trigger 의 MisfireInstruction 속성으로 적절한 처리 가능
 - MISFIRE_INSTRUCTION_ 로 시작하는 상수값으로 타입들 구분가능
 #### 특정 작업 중 JobDataMap 에 영속성이 필요하다면 아래 설정 필요
 - Job Clsss 에 @PersistJobDataAfterExecution 추가
