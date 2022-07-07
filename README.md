@@ -6,7 +6,7 @@ A strong focus of these is, of course, the Springboot Framework
 
 List of Examples
 ================
-- [Quartz](/quartz/README.md)
+- [Quartz](/springboot-quartz)
 
 Base Dependency
 ==
