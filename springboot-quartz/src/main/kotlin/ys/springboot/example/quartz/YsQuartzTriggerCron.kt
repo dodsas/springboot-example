@@ -5,10 +5,9 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean
 import org.springframework.stereotype.Service
 
 @Service
-class YsQuartzCron(
-    scheduler: Scheduler,
-) : YsQuartzAbstract(scheduler) {
-
+class YsQuartzTriggerCron(
+    private val ysScheduler: YsQuartzScheduler,
+) {
     fun scheduleCronJob(
         alias: String,
         cronExpression: String,
@@ -25,6 +24,6 @@ class YsQuartzCron(
         triggerFactory.setPriority(priority)
         triggerFactory.afterPropertiesSet()
 
-        return scheduleJob(alias, jobClass, triggerFactory.`object`!!, jobDataMap, description) as CronTrigger
+        return ysScheduler.scheduleJob(alias, jobClass, triggerFactory.`object`!!, jobDataMap, description) as CronTrigger
     }
 }

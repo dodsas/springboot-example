@@ -3,12 +3,12 @@ package ys.test
 import org.quartz.Job
 import org.quartz.JobExecutionContext
 import org.springframework.stereotype.Service
-import ys.springboot.example.quartz.YsQuartzCron
+import ys.springboot.example.quartz.YsQuartzTriggerCron
 import javax.annotation.PostConstruct
 
 @Service
 class TestService(
-    private val ysQuartzCron: YsQuartzCron
+    private val ysQuartzCron: YsQuartzTriggerCron
 ) {
     @PostConstruct
     fun test() {

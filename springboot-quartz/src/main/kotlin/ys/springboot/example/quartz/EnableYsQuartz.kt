@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Import
 @Retention(AnnotationRetention.RUNTIME)
 @Import(
     YsQuartzConfiguration::class,
-    YsQuartzCron::class,
+    YsQuartzTriggerCron::class,
+    YsQuartzScheduler::class,
 )
 annotation class EnableYsQuartz

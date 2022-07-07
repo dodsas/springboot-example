@@ -13,7 +13,10 @@ import org.springframework.boot.test.context.SpringBootTest
 @SpringBootTest
 internal class YsQuartzTest {
     @Autowired
-    private lateinit var ysQuartz: YsQuartzCron
+    private lateinit var ysQuartz: YsQuartzTriggerCron
+
+    @Autowired
+    private lateinit var scheduler: YsQuartzScheduler
 
     companion object {
         var runCount: Int = 0
@@ -34,7 +37,7 @@ internal class YsQuartzTest {
         )
 
         Thread.sleep(10000)
-        ysQuartz.pause(alias)
+        scheduler.pause(alias)
 
         assertEquals(10, runCount)
     }
@@ -54,9 +57,9 @@ internal class YsQuartzTest {
         )
 
         Thread.sleep(10000)
-        ysQuartz.pause(alias)
+        scheduler.pause(alias)
 
-        val jobDetail = ysQuartz.getJobDetail(trigger.jobKey)
+        val jobDetail = scheduler.getJobDetail(trigger.jobKey)
         assertEquals(10, (jobDetail.jobDataMap["sampleCount"] as TestJobData).count)
     }
 
