@@ -1,4 +1,4 @@
-package ys.standalone.quartz
+package ys.standalone.sample1
 
 import org.quartz.Job
 import org.quartz.JobExecutionContext

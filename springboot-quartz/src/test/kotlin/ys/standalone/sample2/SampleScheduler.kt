@@ -1,12 +1,4 @@
-package ys.springboot.example
-
-import org.quartz.*
-import org.quartz.JobKey.jobKey
-import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
-import org.springframework.scheduling.quartz.SchedulerFactoryBean
-
-import org.quartz.impl.matchers.KeyMatcher.*
+package ys.standalone.sample2
 
 //Move To YsQuartzConfiguration
 

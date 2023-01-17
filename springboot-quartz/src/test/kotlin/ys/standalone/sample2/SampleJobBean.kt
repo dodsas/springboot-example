@@ -1,4 +1,4 @@
-package ys.springboot.example
+package ys.standalone.sample2
 
 import org.quartz.JobExecutionContext
 import org.springframework.scheduling.quartz.QuartzJobBean
