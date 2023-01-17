@@ -1,0 +1,29 @@
+# Created at 2023-01-17T09:09:52.915
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+
+# Created at 2023-01-17T09:09:52.916
+Unexpected IOException with stream: 2023-01-17T09:09:52.915+09:00  INFO 85975 --- [ionShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler ysScheduler_$_NON_CLUSTERED paused.
+
+
+# Created at 2023-01-17T09:09:52.918
+Unexpected IOException with stream: 2023-01-17T09:09:52.917+09:00  INFO 85975 --- [ionShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler ysScheduler_$_NON_CLUSTERED shutting down.
+
+
+# Created at 2023-01-17T09:09:52.918
+Unexpected IOException with stream: 2023-01-17T09:09:52.918+09:00  INFO 85975 --- [ionShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler ysScheduler_$_NON_CLUSTERED paused.
+
+
+# Created at 2023-01-17T09:09:52.919
+Unexpected IOException with stream: 2023-01-17T09:09:52.918+09:00  INFO 85975 --- [ionShutdownHook] org.quartz.core.QuartzScheduler          : Scheduler ysScheduler_$_NON_CLUSTERED shutdown complete.
+
+
+# Created at 2023-01-17T09:09:52.919
+Unexpected IOException with stream: 2023-01-17T09:09:52.919+09:00  INFO 85975 --- [ionShutdownHook] o.s.s.quartz.SchedulerFactoryBean        : Shutting down Quartz Scheduler
+
+

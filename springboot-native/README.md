@@ -1,4 +1,4 @@
-Kotlin and Springboot Examples  
+TODO FIXME Kotlin and Springboot Examples  
 ==
 
 This project is **a collection of example codes** - each covering a single and well defined area of development in the Kotlin ecosystem. 
@@ -11,12 +11,10 @@ List of Examples
 Base Dependency
 ==
 - Springboot
+- JDK 1.8
 - Kotlin
 - Embedded H2 (if needed)
 
-Reference
-==
-- [multiple project via maven](https://github.com/spring-guides/gs-multi-module)
 
 [//]: # (| module | linke                                |)
 

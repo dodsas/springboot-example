@@ -2,16 +2,16 @@ package ys.springboot.example
 
 import org.quartz.*
 import org.quartz.impl.matchers.KeyMatcher
+import org.springframework.beans.factory.InitializingBean
 import org.springframework.scheduling.quartz.CronTriggerFactoryBean
 import org.springframework.stereotype.Service
-import javax.annotation.PostConstruct
 
 @Service
 class Sample(
     private val scheduler: Scheduler
-){
-    @PostConstruct
-    fun addScheduleJob(){
+): InitializingBean{
+
+    override fun afterPropertiesSet() {
         triggerBuilderStyle()
         triggerFactoryBeanStyle()
         triggerWithObjectJobData()
