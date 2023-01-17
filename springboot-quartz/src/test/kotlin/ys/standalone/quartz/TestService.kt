@@ -1,17 +1,17 @@
-package ys.test
+package ys.standalone.quartz
 
 import org.quartz.Job
 import org.quartz.JobExecutionContext
+import org.springframework.beans.factory.InitializingBean
 import org.springframework.stereotype.Service
 import ys.springboot.example.quartz.YsQuartzTriggerCron
-import javax.annotation.PostConstruct
 
 @Service
 class TestService(
     private val ysQuartzCron: YsQuartzTriggerCron
-) {
-    @PostConstruct
-    fun test() {
+): InitializingBean {
+
+    override fun afterPropertiesSet() {
         ysQuartzCron.scheduleCronJob("test", "/3 * * * * ?", TestJob::class.java)
     }
 

@@ -13,6 +13,7 @@ Base Dependency
 - Springboot
 - Kotlin
 - Embedded H2 (if needed)
+- Java19 (recommended, minimum java17)
 
 Reference
 ==
